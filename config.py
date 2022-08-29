@@ -370,7 +370,7 @@ screens = [
                     foreground=catppuccin_mocha['text'],
                     background=catppuccin_mocha['base'],
                     fmt='Keyboard: {}',
-                    configured_keyboard=['us altgr-intl'],
+                    configured_keyboards=['us altgr-intl'],
                     padding=2,
                 ),
                 widget.TextBox(
