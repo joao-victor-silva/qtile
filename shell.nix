@@ -18,9 +18,11 @@ pkgs.mkShell {
   shellHook = ''
     if [[ ! -r .venv/bin/activate ]]; then
       virtualenv .venv
+      source .venv/bin/activate
+      pip install -r requirements.txt
+    else
+      source .venv/bin/activate
     fi
-    source .venv/bin/activate
-    pip install -r requirements.txt
   '';
 
   DIAGNOSTICS = "flake8:mypy:gitlint:cspell:codespell";
